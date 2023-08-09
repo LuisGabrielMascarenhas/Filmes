@@ -1,6 +1,7 @@
 package br.com.etecia.myapp;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -29,7 +30,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+
+        View view;
+
+        LayoutInflater inflater = LayoutInflater.from(mContexto);
+        view = inflater.inflate(R.layout.modelo_filmes,parent, false);
+
+        return new ViewHolder(view);
     }
 
     @Override
