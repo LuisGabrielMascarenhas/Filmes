@@ -25,6 +25,33 @@ public class MainActivity extends AppCompatActivity {
 
         listaFilmes = new ArrayList<>();
 
+        listaFilmes.add(
+                new Filmes("Apocalipse",
+                           "Filme sobre apocalipse",
+                           "Ação",
+                        R.drawable.apocalipe)
+        );
+        listaFilmes.add(
+                new Filmes("Desejos",
+                        "Filme sobre desejos",
+                        "Drama",
+                        R.drawable.desejos)
+        );
+        listaFilmes.add(
+                new Filmes("Dois mil e sessenta e sete",
+                        "Filme sobre ",
+                        "Suspense",
+                        R.drawable.doismilesessetnaesete)
+        );
+        listaFilmes.add(
+                new Filmes("Folha",
+                        "Filme sobre Folha",
+                        "Ação",
+                        R.drawable.folha)
+        );
+
+
+
         MyAdapter adapter = new MyAdapter(getApplicationContext(),listaFilmes);
 
         idRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
